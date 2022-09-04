@@ -16,6 +16,7 @@
 		0630848C28C433F900B2595B /* DistanceConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630848B28C433F900B2595B /* DistanceConverterTests.swift */; };
 		0630849628C433F900B2595B /* DistanceConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630849528C433F900B2595B /* DistanceConverterUITests.swift */; };
 		0630849828C433F900B2595B /* DistanceConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630849728C433F900B2595B /* DistanceConverterUITestsLaunchTests.swift */; };
+		06C6D51828C4357C0023D0E5 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C6D51728C4357B0023D0E5 /* Distance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0630849128C433F900B2595B /* DistanceConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0630849528C433F900B2595B /* DistanceConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverterUITests.swift; sourceTree = "<group>"; };
 		0630849728C433F900B2595B /* DistanceConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06C6D51728C4357B0023D0E5 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0630847D28C433F900B2595B /* Assets.xcassets */,
 				0630847F28C433F900B2595B /* LaunchScreen.storyboard */,
 				0630848228C433F900B2595B /* Info.plist */,
+				06C6D51728C4357B0023D0E5 /* Distance.swift */,
 			);
 			path = DistanceConverter;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C6D51828C4357C0023D0E5 /* Distance.swift in Sources */,
 				0630847928C433F300B2595B /* ViewController.swift in Sources */,
 				0630847528C433F300B2595B /* AppDelegate.swift in Sources */,
 				0630847728C433F300B2595B /* SceneDelegate.swift in Sources */,
