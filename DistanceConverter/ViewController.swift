@@ -14,34 +14,47 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var kmTextField: UITextField!
     
+    @IBOutlet weak var yardTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         milesTextField.text = "\(distance.miles)"
         kmTextField.text = "\(distance.km)"
+        yardTextField.text = "\(distance.yard)"
         
         view.backgroundColor = UIColor(red: 0.146, green: 0.180, blue: 0.236, alpha: 1.0)
         
-        milesTextField.addTarget(self, action: #selector(convertToKm), for: .editingChanged)
-        kmTextField.addTarget(self, action: #selector(convertToMiles), for: .editingChanged)
+        milesTextField.addTarget(self, action: #selector(milesConversion), for: .editingChanged)
+        kmTextField.addTarget(self, action: #selector(kmConversion), for: .editingChanged)
+        yardTextField.addTarget(self, action: #selector(yardConversion), for: .editingChanged)
     }
-
-    //connected by initiating a connection usin0g ctrl key + dragging
-    @objc func convertToKm(_ sender: Any) {
+    
+    @objc func milesConversion(_ sender: Any) {
         if let miles = Double(milesTextField.text!){
             distance.miles = miles
-            kmTextField.text = "\(Double(distance.km))"
+            yardTextField.text = "\(Double(round(distance.yard*100)/100))"
+            kmTextField.text = "\(Double(round(distance.km*100)/100))"
         }
     }
     
-    //connection using method
-    @objc func convertToMiles(_ sender: Any) {
+    @objc func kmConversion(_ sender: Any) {
         if let km = Double(kmTextField.text!){
             distance.km = km
-            //make it return double instead of int to avoid inaccurate truncation
-            milesTextField.text = "\(Double(distance.miles))"
+            yardTextField.text = "\(Double(round(distance.yard*100)/100))"
+            milesTextField.text = "\(Double(round(distance.miles*100)/100))"
         }
     }
+    
+    @objc func yardConversion(_ sender: Any) {
+        if let yard = Double(yardTextField.text!){
+            distance.yard = yard
+            milesTextField.text = "\(Double(round(distance.miles*100)/100))"
+            kmTextField.text = "\(Double(round(distance.km*100)/100))"
+        }
+    }
+    
 }
 
