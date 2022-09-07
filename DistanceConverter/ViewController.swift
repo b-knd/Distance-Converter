@@ -22,23 +22,26 @@ class ViewController: UIViewController {
         kmTextField.text = "\(distance.km)"
         
         view.backgroundColor = UIColor(red: 0.146, green: 0.180, blue: 0.236, alpha: 1.0)
+        
+        milesTextField.addTarget(self, action: #selector(convertToKm), for: .editingChanged)
+        kmTextField.addTarget(self, action: #selector(convertToMiles), for: .editingChanged)
     }
 
-    @IBAction func convertToKm(_ sender: Any) {
+    //connected by initiating a connection usin0g ctrl key + dragging
+    @objc func convertToKm(_ sender: Any) {
         if let miles = Double(milesTextField.text!){
             distance.miles = miles
             kmTextField.text = "\(Double(distance.km))"
         }
     }
     
-    @IBAction func convertToMiles(_ sender: Any) {
+    //connection using method
+    @objc func convertToMiles(_ sender: Any) {
         if let km = Double(kmTextField.text!){
             distance.km = km
             //make it return double instead of int to avoid inaccurate truncation
             milesTextField.text = "\(Double(distance.miles))"
         }
     }
-
-    
 }
 
