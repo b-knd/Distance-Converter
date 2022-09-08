@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var feetTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
         kmTextField.addTarget(self, action: #selector(kmConversion), for: .editingChanged)
         yardTextField.addTarget(self, action: #selector(yardConversion), for: .editingChanged)
         feetTextField.addTarget(self, action: #selector(feetConversion), for: .editingChanged)
+        
+        
     }
     
     @objc func milesConversion(_ sender: Any) {
