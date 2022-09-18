@@ -6,7 +6,10 @@ Units applicable for conversion include miles, kilometer, yards and feets. To co
  ## Application
  Below shows the single main page of the distance converter app
 
- <img src="Media/Screen%20Shot%202022-09-08%20at%209.46.17%20AM.png" width = "400">
+ <img src="Media/Screen%20Shot%202022-09-18%20at%209.15.52%20AM.png" width = "500">
+ <img src="Media/Screen%20Shot%202022-09-18%20at%209.09.22%20AM.png" width = "800">
+
+ 
 
  <img src="Media/Screen%20Shot%202022-09-08%20at%2010.09.10%20AM.png" width = "400">
  
